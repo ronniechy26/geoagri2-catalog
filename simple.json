@@ -1,0 +1,1409 @@
+{
+  "homeCamera": {
+    "west": 115.0,
+    "south": 5.0,
+    "east": 130.0,
+    "north": 20.0
+  },
+  "catalog": [
+    {
+      "id": "k1N6d0m3jR",
+      "type": "group",
+      "name": "Agricultural Datasets",
+      "description": "<p>Agricultural datasets encompass vital information on farm machinery, infrastructure, farm-to-market roads, and cold storage facilities, etc. . These datasets support decision-making to improve agricultural efficiency, logistics, and resource management, fostering sustainable development in the sector</p><p>For inquiries and comments on the Agricultural Datasets, you may contact <a href='mailto:mis_support@bafe.da.gov.ph'>mis_support@bafe.da.gov.ph</a>.</p>",
+      "isOpen": true,
+      "members": [
+        {
+          "id": "NZFAQBVZED",
+          "type": "group",
+          "name": "Machineries and Infrastructure",
+          "members": [
+            {
+              "description": "Data is from ABEMIS",
+              "type": "wms",
+              "name": "Agricultural Machinery (DA implemented, 2016-present)",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:iroadmap_machinery",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from ABEMIS",
+              "type": "wms",
+              "name": "Agricultural Machinery (DA implemented, By Year)",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:iroadmap_machinery_with_date",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "chartType": "momentLines",
+              "showStringIfPropertyValueIsNull": "Data is not available",
+              "timeLabel": "Funding Year",
+              "dateFormat": "yyyy",
+              "isPaused": false
+            },
+            {
+              "description": "Data is from ABEMIS",
+              "type": "wms",
+              "name": "Agricultural Machinery (DA implemented, By Machine Name)",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:iroadmap_machinery_per_machine_type",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "chartType": "momentLines",
+              "showStringIfPropertyValueIsNull": "Data is not available"
+            },
+            {
+              "description": "Data is from ABEMIS",
+              "type": "wms",
+              "name": "Agricultural Machinery (DA and Non-DA Projects)",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:iroadmap_fundsource",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from ABEMIS",
+              "type": "wms",
+              "name": "Rural Infrastructure (DA implemented, 2016-present)",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:infra_for_public",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from DA-BAFE",
+              "type": "wms",
+              "name": "Appropriateness of tractor",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:ApTech",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "cacheDuration": "2h"
+            },
+            {
+              "id": "RUUYNWFQYV",
+              "type": "geojson",
+              "url": "https://abemis.bafe.gov.ph/api/agila",
+              "name": "FMRNP Project Proposals from LGU",
+              "hideDefaultDescription": true,
+              "description": "Data is from ABEMIS and consists of KML files that were uploaded to the system.",
+              "styles": [
+                {
+                  "id": "name",
+                  "hidden": true
+                },
+                {
+                  "id": "description",
+                  "hidden": true
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "name": "Agricultural Machinery (DA implemented, By Banner Program)",
+              "members": [
+                {
+                  "description": "Data is from ABEMIS",
+                  "type": "wms",
+                  "name": "National Corn Program",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:iroadmap_machinery_per_banner",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "parameters": {
+                    "CQL_FILTER": "banner_program = 'Corn Program'"
+                  }
+                },
+                {
+                  "description": "Data is from ABEMIS",
+                  "type": "wms",
+                  "name": "National Rice Program",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:iroadmap_machinery_per_banner",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "parameters": {
+                    "CQL_FILTER": "banner_program = 'Rice Program'"
+                  }
+                },
+                {
+                  "description": "Data is from ABEMIS",
+                  "type": "wms",
+                  "name": "High Value Crop Development Program",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:iroadmap_machinery_per_banner",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "parameters": {
+                    "CQL_FILTER": "banner_program = 'High Value Crop Development Program'"
+                  }
+                },
+                {
+                  "description": "Data is from ABEMIS",
+                  "type": "wms",
+                  "name": "National Organic Agriculture Program",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:iroadmap_machinery_per_banner",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "parameters": {
+                    "CQL_FILTER": "banner_program = 'National Organic Agriculture Program'"
+                  }
+                },
+                {
+                  "description": "Data is from ABEMIS",
+                  "type": "wms",
+                  "name": "National Livestock Program",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:iroadmap_machinery_per_banner",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "parameters": {
+                    "CQL_FILTER": "banner_program = 'National Livestock Program'"
+                  }
+                },
+                {
+                  "description": "Data is from ABEMIS",
+                  "type": "wms",
+                  "name": "National Urban and Peri-Urban Agriculture Program",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:iroadmap_machinery_per_banner",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "parameters": {
+                    "CQL_FILTER": "banner_program = 'National Urban and Peri-Urban Agriculture Program'"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "name": "Agricultural Infrastructure (DA implemented, By Banner Program)",
+              "members": [
+                {
+                  "description": "Data is from ABEMIS",
+                  "type": "wms",
+                  "name": "National Corn Program",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:iroadmap_infra_per_banner",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "parameters": {
+                    "CQL_FILTER": "banner_program = 'Corn Program'"
+                  }
+                },
+                {
+                  "description": "Data is from ABEMIS",
+                  "type": "wms",
+                  "name": "National Rice Program",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:iroadmap_infra_per_banner",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "parameters": {
+                    "CQL_FILTER": "banner_program = 'Rice Program'"
+                  }
+                },
+                {
+                  "description": "Data is from ABEMIS",
+                  "type": "wms",
+                  "name": "High Value Crop Development Program",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:iroadmap_infra_per_banner",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "parameters": {
+                    "CQL_FILTER": "banner_program = 'High Value Crop Development Program'"
+                  }
+                },
+                {
+                  "description": "Data is from ABEMIS",
+                  "type": "wms",
+                  "name": "National Organic Agriculture Program",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:iroadmap_infra_per_banner",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "parameters": {
+                    "CQL_FILTER": "banner_program = 'National Organic Agriculture Program'"
+                  }
+                },
+                {
+                  "description": "Data is from ABEMIS",
+                  "type": "wms",
+                  "name": "National Livestock Program",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:iroadmap_infra_per_banner",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "parameters": {
+                    "CQL_FILTER": "banner_program = 'National Livestock Program'"
+                  }
+                },
+                {
+                  "description": "Data is from ABEMIS",
+                  "type": "wms",
+                  "name": "National Urban and Peri-Urban Agriculture Program",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:iroadmap_infra_per_banner",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "parameters": {
+                    "CQL_FILTER": "banner_program = 'National Urban and Peri-Urban Agriculture Program'"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "EQRLMHHHCB",
+          "type": "group",
+          "name": "Farm to Market Road",
+          "description": "<p>Farm-to-market road are roads linking the agriculture and fisheries production sites, coastal landing points and post-harvest facilities to the market and arterial roads and highways.</p><p>Specifically, these FMRs are local roads such as (provincial, city, municipal, and barangay roads) including farm roads. The quality and quantity of these FMRs have a big impact on transport costs for farmers; good roads close to farms lower production costs and raise the prices that farmers get for their products.</p><p style=\"text-align: center;\"><img src=\"https://i.ibb.co/VV28mxX/FMR.jpg\" alt=\"Farm-to-Market Road\" style=\"width: 50%; max-width: 400px; height: auto;\" /></p><p>For inquiries and comments on the Farm to Market Road, you may contact <a href='mailto:seppd.fmrdp@bafe.da.gov.ph'>seppd.fmrdp@bafe.da.gov.ph</a>.</p>",
+          "members": [
+            {
+              "description": "Data is from FMR Proponents",
+              "type": "wms",
+              "name": "DA- Farm-to-market Roads Dev’t Program (Proposed)",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:FMRDP_PROPOSED",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from FMR Proponents",
+              "type": "wms",
+              "name": "DA- Farm-to-market Roads Dev’t Program (completed - 2016-present)",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:FMRDP_COMPLETED",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "url": "https://services1.arcgis.com/IwZZTMxZCmAmFYvF/arcgis/rest/services/DA_FMR_FY2024_LiveView/FeatureServer/0",
+              "type": "esri-featureServer",
+              "name": "DA- Farm-to-market Roads Dev’t Program (2024)",
+              "id": "DA_FMR_FY2024_LiveView",
+              "hideDefaultDescription": true,
+              "description": "Data is from DPWH",
+              "hideSource": true,
+              "style": {
+                "fill": "yellow"
+              }
+            },
+            {
+              "url": "https://services1.arcgis.com/IwZZTMxZCmAmFYvF/arcgis/rest/services/DA_FMR_FY2023_LiveView/FeatureServer/0",
+              "type": "esri-featureServer",
+              "name": "DA- Farm-to-market Roads Dev’t Program (2023)",
+              "id": "DA_FMR_FY2023_LiveView",
+              "hideDefaultDescription": true,
+              "description": "Data is from DPWH",
+              "hideSource": true,
+              "style": {
+                "fill": "red"
+              }
+            },
+            {
+              "url": "https://services1.arcgis.com/IwZZTMxZCmAmFYvF/arcgis/rest/services/DA_FMR_FY2022_LiveView/FeatureServer/0",
+              "type": "esri-featureServer",
+              "name": "DA- Farm-to-market Roads Dev’t Program (2022)",
+              "id": "DA_FMR_FY2022_LiveView",
+              "hideDefaultDescription": true,
+              "description": "Data is from DPWH",
+              "hideSource": true,
+              "style": {
+                "fill": "blue"
+              }
+            },
+            {
+              "url": "https://services1.arcgis.com/IwZZTMxZCmAmFYvF/arcgis/rest/services/DA_FMR_FY2021_LiveView/FeatureServer/0",
+              "type": "esri-featureServer",
+              "name": "DA- Farm-to-market Roads Dev’t Program (2021)",
+              "id": "DA_FMR_FY2021_LiveView",
+              "hideDefaultDescription": true,
+              "description": "Data is from DPWH",
+              "hideSource": true,
+              "style": {
+                "fill": "green"
+              }
+            },
+            {
+              "description": "Data is from PRDP",
+              "type": "wms",
+              "name": "Philippine Rural Development Project FMR Projects",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:FMR_PRDP",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from DOT",
+              "type": "wms",
+              "name": "Department of Tourism Road",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:DOT_COMPLETED_ROAD",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from DTI",
+              "type": "wms",
+              "name": "Department of Trade and Industry Roll IT Road",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:DTI_ROLL_IT",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from SRA",
+              "type": "wms",
+              "name": "Sugar Regulatory Administration Farm To Mill Road",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:farm_to_mill_road",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "id": "HQRYBKWEWO",
+              "type": "group",
+              "name": "LGU FMR Proposal",
+              "members": [
+                {
+                  "id": "YXBSRNNUSM",
+                  "isGroup": true,
+                  "name": "CAR",
+                  "type": "terria-reference",
+                  "url": "https://raw.githubusercontent.com/ronniechy26/iroadmap-region-catalog/main/CAR.json"
+                },
+                {
+                  "id": "TFQUIEKMMB",
+                  "isGroup": true,
+                  "name": "Region I",
+                  "type": "terria-reference",
+                  "url": "https://raw.githubusercontent.com/ronniechy26/iroadmap-region-catalog/main/R1.json"
+                },
+                {
+                  "id": "IKJNERDQIS",
+                  "isGroup": true,
+                  "name": "Region II",
+                  "type": "terria-reference",
+                  "url": "https://raw.githubusercontent.com/ronniechy26/iroadmap-region-catalog/main/R2.json"
+                },
+                {
+                  "id": "ZVZAVWIIII",
+                  "isGroup": true,
+                  "type": "terria-reference",
+                  "name": "Region III",
+                  "url": "https://raw.githubusercontent.com/ronniechy26/iroadmap-region-catalog/main/R3.json"
+                },
+                {
+                  "id": "PEXNBFTQYX",
+                  "isGroup": true,
+                  "type": "terria-reference",
+                  "name": "Region IV-A",
+                  "url": "https://raw.githubusercontent.com/ronniechy26/iroadmap-region-catalog/main/R4A.json"
+                },
+                {
+                  "id": "SQQLAGOLJA",
+                  "isGroup": true,
+                  "type": "terria-reference",
+                  "name": "Region IV-B",
+                  "url": "https://raw.githubusercontent.com/ronniechy26/iroadmap-region-catalog/main/R4B.json"
+                },
+                {
+                  "id": "IILOBDDJEZ",
+                  "isGroup": true,
+                  "type": "terria-reference",
+                  "name": "Region V",
+                  "url": "https://raw.githubusercontent.com/ronniechy26/iroadmap-region-catalog/main/R5.json"
+                },
+                {
+                  "id": "BTYMLXWHRR",
+                  "isGroup": true,
+                  "type": "terria-reference",
+                  "name": "Region VI",
+                  "url": "https://raw.githubusercontent.com/ronniechy26/iroadmap-region-catalog/main/R6.json"
+                },
+                {
+                  "id": "QAALBJGFTM",
+                  "isGroup": true,
+                  "type": "terria-reference",
+                  "name": "Region VII",
+                  "url": "https://raw.githubusercontent.com/ronniechy26/iroadmap-region-catalog/main/R7.json"
+                },
+                {
+                  "id": "OQKZWQTZAB",
+                  "isGroup": true,
+                  "type": "terria-reference",
+                  "name": "Region VIII",
+                  "url": "https://raw.githubusercontent.com/ronniechy26/iroadmap-region-catalog/main/R8.json"
+                },
+                {
+                  "id": "CSBIJDMVXU",
+                  "isGroup": true,
+                  "type": "terria-reference",
+                  "name": "Region IX",
+                  "url": "https://raw.githubusercontent.com/ronniechy26/iroadmap-region-catalog/main/R9.json"
+                },
+                {
+                  "id": "PXQEDZTAFF",
+                  "isGroup": true,
+                  "type": "terria-reference",
+                  "name": "Region X",
+                  "url": "https://raw.githubusercontent.com/ronniechy26/iroadmap-region-catalog/main/R10.json"
+                },
+                {
+                  "id": "CJFHZQFCEL",
+                  "isGroup": true,
+                  "type": "terria-reference",
+                  "name": "Region XI",
+                  "url": "https://raw.githubusercontent.com/ronniechy26/iroadmap-region-catalog/main/R11.json"
+                },
+                {
+                  "id": "YJAQHLQJKT",
+                  "isGroup": true,
+                  "type": "terria-reference",
+                  "name": "Region XII",
+                  "url": "https://raw.githubusercontent.com/ronniechy26/iroadmap-region-catalog/main/R12.json"
+                },
+                {
+                  "id": "QGTYPJESDJ",
+                  "isGroup": true,
+                  "type": "terria-reference",
+                  "name": "Region XIII",
+                  "url": "https://raw.githubusercontent.com/ronniechy26/iroadmap-region-catalog/main/R13.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "QPPXUQXYMC",
+          "type": "group",
+          "name": "Cold Storage",
+          "members": [
+            {
+              "description": "Data is from ABEMIS",
+              "type": "wms",
+              "name": "Fruits and Veg Cold Storage by fund (Govt)",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:cold_fruit_veg_by_fund_govt"
+            },
+            {
+              "description": "Data is from ABEMIS",
+              "type": "wms",
+              "name": "Fruits and Veg Cold Storage by fund (Private)",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:cold_fruit_veg_by_fund_private"
+            },
+            {
+              "description": "Data is from DA-HVCDP",
+              "type": "wms",
+              "name": "Proposed Onion Cold Storage",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:proposed_onion"
+            },
+            {
+              "description": "Data is from AMAS",
+              "type": "wms",
+              "name": "Meat Cold Storage",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:AMAS_COLD_MEAT"
+            },
+            {
+              "description": "Data is from AMAS",
+              "type": "wms",
+              "name": "Fishery Cold Storage",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:AMAS_COLD_FISHERY"
+            }
+          ]
+        },
+        {
+          "id": "IAVCPGESGL",
+          "type": "group",
+          "name": "Processing Centers",
+          "members": [
+            {
+              "description": "Data is from ABEMIS",
+              "type": "wms",
+              "name": "Agri Processing Centers",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:Agri Processing Centers",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from ABEMIS",
+              "type": "wms",
+              "name": "Rice Processing Center",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:rice_processing_center",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              },
+              "availableStyles": [
+                {
+                  "layerName": "geoagri:rice_processing_center",
+                  "styles": [
+                    {
+                      "name": "RPC2",
+                      "title": "RPC Status"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "description": "Data is from ABEMIS",
+              "type": "wms",
+              "name": "Coffee and Cacao Facilities",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:COFFEE_CACAO_FACILITIES",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from NFA",
+              "type": "wms",
+              "name": "NFA Warehouse",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:nfa_warehouse",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "GJLVPQCMNJ",
+          "type": "group",
+          "name": "Production Area",
+          "members": [
+            {
+              "description": "Data is from Sugar Regulatory Administration",
+              "type": "wms",
+              "name": "Sugar Cane Area",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:SUGAR_CANE_AREA",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from PhilRice PRISM",
+              "type": "wms",
+              "name": "Rice Area (Irrigated)",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:rice_area_irrigated",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from PhilRice PRISM",
+              "type": "wms",
+              "name": "Rice area (Rainfed Lowland)",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:rainfed_lowland",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from BSWM-NPAAAD",
+              "type": "wms",
+              "name": "Fisheries Area",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:fisheries",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from BSWM-NPAAAD",
+              "type": "wms",
+              "name": "High Value Crops",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:high_value_crop",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from DA-HVCDP",
+              "type": "wms",
+              "name": "Onion Total Production in Metric Tons",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:onion",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "AMINMCYGXS",
+          "type": "group",
+          "name": "Agri-Fishery Markets and Trading Centers",
+          "members": [
+            {
+              "description": "Data is from DA-BAFE",
+              "type": "wms",
+              "name": "Public Market",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:public_market",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from DA-AMAS",
+              "type": "wms",
+              "name": "Agribusiness and Marketing Assistance Service Trading Centers",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:AMAS_TRADING_CENTERS",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from DA-AMAS",
+              "type": "wms",
+              "name": "Fish Landing Centers",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:AMAS_COLD_FISH_LANDING",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from DA-AMAS",
+              "type": "wms",
+              "name": "Organic Trading Post",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:AMAS_COLD_ORGANIC",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from DA-AMAS",
+              "type": "wms",
+              "name": "Brgy & Municipal Food Terminal",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:AMAS_COLD_FOOD_TERMINAL",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "JTBQEOUMQO",
+          "type": "group",
+          "name": "Roads and Boundaries",
+          "members": [
+            {
+              "description": "Data is from DPWH",
+              "type": "wms",
+              "name": "National Road",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:national_road",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Regional boundary is for mapping purposes not for boundary disputes or other legal territorial disputes.",
+              "type": "wms",
+              "name": "Region Boundary",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:region_boundary",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Provincial boundary is for mapping purposes not for boundary disputes or other legal territorial disputes.",
+              "type": "wms",
+              "name": "Provincial Boundary",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:province_boundary",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Municipal boundary is for mapping purposes not for boundary disputes or other legal territorial disputes.",
+              "type": "wms",
+              "name": "Municipal Boundary",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:municipal_boundary",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Barangay boundary is for mapping purposes not for boundary disputes or other legal territorial disputes.",
+              "type": "wms",
+              "name": "Barangay Boundary",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:iroadmap_barangayboundary",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from Department of the Interior and Local Government (DILG)",
+              "type": "wms",
+              "name": "Local Roads",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:local_roads",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "id": "HQRYBKWETY",
+              "name": "Region Boundary",
+              "isGroup": true,
+              "type": "terria-reference",
+              "url": "https://raw.githubusercontent.com/ronniechy26/geoagri-agila-catalog/refs/heads/main/RegionCategory.json"
+            }
+          ]
+        },
+        {
+          "id": "VLBYABARDO",
+          "type": "group",
+          "name": "Agricultural Resource Areas",
+          "members": [
+            {
+              "description": "Data is from DENR",
+              "type": "wms",
+              "name": "Protected Areas",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:ProtectedAreas",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from NCIP",
+              "type": "wms",
+              "name": "Certificate of Ancestral Domain Title",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:CADT",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "PHXFZIOANY",
+          "type": "group",
+          "name": "Network of Protected Areas for Agriculture and Agro-Industrial Development (NPAAAD)",
+          "description": "<table style=\"width: 100%; border-collapse: collapse; font-family: Arial, sans-serif;\"><thead><tr><th style=\"border: 1px solid black; padding: 8px; background-color: #d22323; color: white;\">Mapping Symbol</th><th style=\"border: 1px solid black; padding: 8px; background-color: #d22323; color: white;\">Description</th><th style=\"border: 1px solid black; padding: 8px; background-color: #d22323; color: white;\">Color Codes (RGB)</th></tr></thead><tbody><tr><td style=\"border: 1px solid black; padding: 8px;\">A</td><td style=\"border: 1px solid black; padding: 8px;\">All irrigated land/areas</td><td style=\"border: 1px solid black; padding: 8px; background-color: rgb(111, 180, 102);\">111-180-102</td></tr><tr><td style=\"border: 1px solid black; padding: 8px;\">B</td><td style=\"border: 1px solid black; padding: 8px;\">All irrigable lands already covered by irrigation projects w/ firm funding commitments</td><td style=\"border: 1px solid black; padding: 8px; background-color: rgb(188, 224, 132);\">188-224-132</td></tr><tr><td style=\"border: 1px solid black; padding: 8px;\">C</td><td style=\"border: 1px solid black; padding: 8px;\">All alluvial plain lands highly suitable for agriculture whether irrigated or not</td><td style=\"border: 1px solid black; padding: 8px; background-color: rgb(255, 251, 113);\">255-251-113</td></tr><tr><td style=\"border: 1px solid black; padding: 8px;\">D</td><td style=\"border: 1px solid black; padding: 8px;\">Agro-Industrial crop-lands or lands presently planted to industrial crops that support the viability of existing agricultural infrastructure and agro-based enterprises</td><td style=\"border: 1px solid black; padding: 8px; background-color: rgb(255, 178, 211);\">255-178-211</td></tr><tr><td style=\"border: 1px solid black; padding: 8px;\">E</td><td style=\"border: 1px solid black; padding: 8px;\">Highlands or areas located at an elevation of five hundred (500) meters or above and have the potentials for growing semi-temperate and high-value crops</td><td style=\"border: 1px solid black; padding: 8px; background-color: rgb(192, 174, 138);\">192-174-138</td></tr><tr><td style=\"border: 1px solid black; padding: 8px;\">F</td><td style=\"border: 1px solid black; padding: 8px;\">All agricultural lands that are ecologically fragile, the conversion of which will result in serious environmental degradation, and mangrove areas and fish sanctuaries</td><td style=\"border: 1px solid black; padding: 8px; background-color: rgb(255, 192, 102);\">255-192-102</td></tr><tr><td style=\"border: 1px solid black; padding: 8px;\">G</td><td style=\"border: 1px solid black; padding: 8px;\">All fishery areas as defined pursuant to Fisheries code of 1998</td><td style=\"border: 1px solid black; padding: 8px; background-color: rgb(102, 132, 252);\">102-132-252</td></tr><tr><td style=\"border: 1px solid black; padding: 8px;\">H</td><td style=\"border: 1px solid black; padding: 8px;\">Forest/Watershed areas (critical watersheds including mangroves)</td><td style=\"border: 1px solid black; padding: 8px; background-color: rgb(204, 204, 204);\">204-204-204</td></tr><tr><td style=\"border: 1px solid black; padding: 8px;\">Bu</td><td style=\"border: 1px solid black; padding: 8px;\">Built-up areas, urban land, airport, roads and bridges</td><td style=\"border: 1px solid black; padding: 8px; background-color: rgb(204, 204, 204);\">204-204-204</td></tr><tr><td style=\"border: 1px solid black; padding: 8px;\">Others</td><td style=\"border: 1px solid black; padding: 8px;\">Quarry, mine pit, barren land, rock land, river wash, beach sand, sand dunes and landfill</td><td style=\"border: 1px solid black; padding: 8px;\"></td></tr></tbody></table>",
+          "members": [
+            {
+              "description": "Data is from BSWM",
+              "type": "wms",
+              "name": "NPAAAD Luzon",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:npaaad_luzon"
+            },
+            {
+              "description": "Data is from BSWM",
+              "type": "wms",
+              "name": "NPAAAD Visayaz",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:npaaad_visayaz"
+            },
+            {
+              "description": "Data is from BSWM",
+              "type": "wms",
+              "name": "NPAAAD Mindanao",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:npaaad_mindanao"
+            }
+          ]
+        },
+        {
+          "id": "FKZOKVEABV",
+          "type": "group",
+          "name": "Strategic Agriculture and Fisheries Development Zone (SAFDZ)",
+          "description": "<table style=\"width: 100%; border-collapse: collapse; font-family: Arial, sans-serif;\">\n<thead>\n<tr>\n<th style=\"border: 1px solid black; padding: 8px; background-color: #d22323; color: white;\">Mapping Symbol</th>\n<th style=\"border: 1px solid black; padding: 8px; background-color: #d22323; color: white;\">Description</th>\n<th style=\"border: 1px solid black; padding: 8px; background-color: #d22323; color: white;\">Color Codes (RGB)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"border: 1px solid black; padding: 8px;\">1</td>\n<td style=\"border: 1px solid black; padding: 8px;\">Strategic Crop Sub-Development Zone</td>\n<td style=\"border: 1px solid black; padding: 8px; background-color: rgb(192, 254, 191);\">192-254-191</td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; padding: 8px;\">2</td>\n<td style=\"border: 1px solid black; padding: 8px;\">Strategic Livestock Sub-Development Zone</td>\n<td style=\"border: 1px solid black; padding: 8px; background-color: rgb(182, 126, 128);\">182-126-128</td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; padding: 8px;\">3</td>\n<td style=\"border: 1px solid black; padding: 8px;\">Strategic Fishery Sub-Development Zone</td>\n<td style=\"border: 1px solid black; padding: 8px; background-color: rgb(77, 77, 255);\">77-77-255</td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; padding: 8px;\">4</td>\n<td style=\"border: 1px solid black; padding: 8px;\">Strategic Integrated Crop/Livestock Sub-Development Zone</td>\n<td style=\"border: 1px solid black; padding: 8px; background-color: rgb(78, 230, 77);\">78-230-77</td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; padding: 8px;\">5</td>\n<td style=\"border: 1px solid black; padding: 8px;\">Strategic Integrated Crop/Fishery Sub-Development Zone</td>\n<td style=\"border: 1px solid black; padding: 8px; background-color: rgb(77, 167, 77);\">77-167-77</td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; padding: 8px;\">6</td>\n<td style=\"border: 1px solid black; padding: 8px;\">Strategic Integrated Crop/Livestock/Fishery Sub-Development Zone</td>\n<td style=\"border: 1px solid black; padding: 8px; background-color: rgb(254, 212, 212);\">254-212-212</td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; padding: 8px;\">7</td>\n<td style=\"border: 1px solid black; padding: 8px;\">Strategic Integrated Fishery/Livestock Sub-Development Zone</td>\n<td style=\"border: 1px solid black; padding: 8px; background-color: rgb(207, 192, 77);\">207-192-77</td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; padding: 8px;\">8</td>\n<td style=\"border: 1px solid black; padding: 8px;\">Remaining NPAAAD</td>\n<td style=\"border: 1px solid black; padding: 8px; background-color: rgb(255, 250, 90);\">255-250-90</td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; padding: 8px;\">9</td>\n<td style=\"border: 1px solid black; padding: 8px;\">Agro-forestry</td>\n<td style=\"border: 1px solid black; padding: 8px; background-color: rgb(254, 197, 77);\">254-197-77</td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; padding: 8px;\">10</td>\n<td style=\"border: 1px solid black; padding: 8px;\">Watershed Areas/Forest areas (critical watershed including mangroves)</td>\n<td style=\"border: 1px solid black; padding: 8px;\"></td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; padding: 8px;\">Bu</td>\n<td style=\"border: 1px solid black; padding: 8px;\">Built-up areas, urban land, airport, roads and bridges</td>\n<td style=\"border: 1px solid black; padding: 8px; background-color: rgb(204, 204, 204);\">204-204-204</td>\n</tr>\n<tr>\n<td style=\"border: 1px solid black; padding: 8px;\">Others</td>\n<td style=\"border: 1px solid black; padding: 8px;\">Quarry, mine pit, barren land, rock land, river wash, beach sand, sand dunes and landfill</td>\n<td style=\"border: 1px solid black; padding: 8px;\"></td>\n</tr>\n</tbody>\n</table>",
+          "members": [
+            {
+              "description": "Data is from BSWM",
+              "type": "wms",
+              "name": "SAFDZ Luzon",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:safdz_luzon"
+            },
+            {
+              "description": "Data is from BSWM",
+              "type": "wms",
+              "name": "SAFDZ Visayaz",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:safdz_visayaz"
+            },
+            {
+              "description": "Data is from BSWM",
+              "type": "wms",
+              "name": "SAFDZ Mindanao",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:safdz_mindanao"
+            }
+          ]
+        },
+        {
+          "id": "XOKBNOKBHX",
+          "type": "group",
+          "name": "Suitability maps",
+          "members": [
+            {
+              "description": "Data is from _",
+              "type": "wms",
+              "name": "Suitability site of Solar Powered Irrigation system",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:spis_suitability_map",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "DNSYJXLWBD",
+          "type": "group",
+          "name": "Machinery Suppliers and Services",
+          "members": [
+            {
+              "description": "Data is from DA-BAFE",
+              "type": "wms",
+              "name": "Agri Fisheries Machinery and Equipment Service Center ",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:AFMESC",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from DA-BAFE",
+              "type": "wms",
+              "name": "Agricultural Machinery Manufacturer, Fabricator, Assembler, Distributor Dealer, Importer, Exporter",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:PTO",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "WFDOIBNYZL",
+          "type": "group",
+          "name": "Bridges",
+          "members": [
+            {
+              "type": "group",
+              "name": "Department of Agriculture - Farm Bridge",
+              "members": [
+                {
+                  "description": "Data is from DA-BAFE",
+                  "type": "wms",
+                  "name": "DA Farm Bridge Proposal",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:FMB_PROPOSAL",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "featureInfoTemplate": {
+                    "template": "<p><strong>Farm Bridge Proposal</strong></p> <p>Name: {{NAME}}</p><p>Latitude: {{LAT}}</p><p>Longitude: {{LONG}}</p> <a href='https://ulap-reports.georisk.gov.ph/api/reports/hazard-assessments/{{LAT}}/{{LONG}}' target='_blank' style='color:#46ff00;text-decoration: underline;'>View Hazard Assessment</a>"
+                  }
+                },
+                {
+                  "description": "Data is from DA-PRDP",
+                  "type": "wms",
+                  "name": "PRDP - Bridge",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:prdp_bridge_only",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "featureInfoTemplate": {
+                    "template": "<p><strong>PRDP - Bridge</strong></p> <p>ProjectId: {{Subproject}}</p><p>ProjectName: {{Subproje_1}}</p><p>Latitude: {{Latitude}}</p><p>Longitude: {{Longitude}}</p> <a href='https://ulap-reports.georisk.gov.ph/api/reports/hazard-assessments/{{Latitude}}/{{Longitude}}' target='_blank' style='color:#46ff00;text-decoration: underline;'>View Hazard Assessment</a>"
+                  }
+                },
+                {
+                  "description": "Data is from DA-PRDP",
+                  "type": "wms",
+                  "name": "PRDP - FMR and Bridge",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:prdp_bridge_fmr",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "featureInfoTemplate": {
+                    "template": "<p><strong>PRDP - Bridge</strong></p> <p>ProjectId: {{SP_ID}}</p><p>ProjectName: {{SP_Name}}</p><p>Latitude: {{Latitude}}</p><p>Longitude: {{Longitude}}</p> <a href='https://ulap-reports.georisk.gov.ph/api/reports/hazard-assessments/{{Latitude}}/{{Longitude}}' target='_blank' style='color:#46ff00;text-decoration: underline;'>View Hazard Assessment</a>"
+                  }
+                },
+                {
+                  "description": "Data is from DA-MIADP",
+                  "type": "wms",
+                  "name": "MIADP Farm Bridge",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:MIADP_FMB",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "name": "Department of Agrarian Reform - Farm Bridge",
+              "members": [
+                {
+                  "description": "Data is from Department of Agrarian Reform",
+                  "type": "wms",
+                  "name": "DAR Farm to Market Bridge Proposal",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:pbbm_bridge",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
+                },
+                {
+                  "description": "Data is from Department of Agrarian Reform",
+                  "type": "wms",
+                  "name": "DAR 100 Priority Bridges",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:pbbm_bridge_priority",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "featureInfoTemplate": {
+                    "template": "<p><strong>Farm Bridge Proposal</strong></p> <p>Name: {{NAME}}<p>Latitude: {{LAT_A_1}}</p><p>Longitude: {{LONG_A_2}}</p></p> <a href='https://ulap-reports.georisk.gov.ph/api/reports/hazard-assessments/{{LAT_A_1}}/{{LONG_A_2}}' target='_blank' style='color:#46ff00;text-decoration: underline;'>View Hazard Assessment</a>"
+                  }
+                },
+                {
+                  "description": "Data is from Department of Agrarian Reform",
+                  "type": "wms",
+                  "name": "DAR 350 Priority Bridges",
+                  "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+                  "layers": "geoagri:pbbm_bridge_350",
+                  "hideDefaultDescription": true,
+                  "hideSource": true,
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  },
+                  "featureInfoTemplate": {
+                    "template": "<p><strong>Farm Bridge Proposal</strong></p> <p>Name: {{NAME}}</p>Latitude: {{LAT_A_1}}</p><p>Longitude: {{LONG_A_2}}</p></p> <a href='https://ulap-reports.georisk.gov.ph/api/reports/hazard-assessments/{{LAT_A_1}}/{{LONG_A_2}}' target='_blank' style='color:#46ff00;text-decoration: underline;font-weight:bold'>View Hazard Assessment</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "KRVBVRWUHV",
+          "type": "group",
+          "name": "Hazard Hunter PH",
+          "members": [
+            {
+              "name": "ActiveFault",
+              "type": "esri-mapServer",
+              "url": "https://ulap-hazards.georisk.gov.ph/arcgis/rest/services/PHIVOLCSPublic/ActiveFault/MapServer",
+              "layers": "0",
+              "opacity": 1.0,
+              "description": "Data is from Hazard Hunter PH"
+            },
+            {
+              "name": "Ballistic Projectile",
+              "type": "esri-mapServer",
+              "url": "https://ulap-hazards.georisk.gov.ph/arcgis/rest/services/PHIVOLCSPublic/BallisticProjectile/MapServer",
+              "layers": "0",
+              "opacity": 1.0,
+              "description": "Data is from Hazard Hunter PH"
+            },
+            {
+              "name": "Base Surge",
+              "type": "esri-mapServer",
+              "url": "https://ulap-hazards.georisk.gov.ph/arcgis/rest/services/PHIVOLCSPublic/BaseSurge/MapServer",
+              "layers": "0",
+              "opacity": 1.0,
+              "description": "Data is from Hazard Hunter PH"
+            },
+            {
+              "name": "Earthquake Induced Landslide",
+              "type": "esri-mapServer",
+              "url": "https://ulap-hazards.georisk.gov.ph/arcgis/rest/services/PHIVOLCSPublic/EarthquakeInducedLandslide/MapServer",
+              "layers": "0",
+              "opacity": 1.0,
+              "description": "Data is from Hazard Hunter PH"
+            },
+            {
+              "name": "Liquefaction",
+              "type": "esri-mapServer",
+              "url": "https://ulap-hazards.georisk.gov.ph/arcgis/rest/services/PHIVOLCSPublic/Liquefaction/MapServer",
+              "layers": "0",
+              "opacity": 1.0,
+              "description": "Data is from Hazard Hunter PH"
+            },
+            {
+              "name": "Seiches",
+              "type": "esri-mapServer",
+              "url": "https://ulap-hazards.georisk.gov.ph/arcgis/rest/services/PHIVOLCSPublic/Seiches/MapServer",
+              "layers": "0",
+              "opacity": 1.0,
+              "description": "Data is from Hazard Hunter PH"
+            },
+            {
+              "name": "Tsunami",
+              "type": "esri-mapServer",
+              "url": "https://ulap-hazards.georisk.gov.ph/arcgis/rest/services/PHIVOLCSPublic/Tsunami/MapServer",
+              "layers": "0",
+              "opacity": 1.0,
+              "description": "Data is from Hazard Hunter PH"
+            },
+            {
+              "name": "Volcano Location",
+              "type": "esri-mapServer",
+              "url": "https://ulap-hazards.georisk.gov.ph/arcgis/rest/services/PHIVOLCSPublic/VolcanoLocation/MapServer",
+              "layers": "0",
+              "opacity": 1.0,
+              "description": "Data is from Hazard Hunter PH"
+            }
+          ]
+        },
+        {
+          "id": "UTNPHOWCQY",
+          "type": "group",
+          "name": "Other Related Maps",
+          "members": [
+            {
+              "description": "Data is from DOE",
+              "type": "wms",
+              "name": "Fuel Station",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:fuel_station",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from Philippine Ports Authority",
+              "type": "wms",
+              "name": "Philippine Ports Authority (Base Ports and Terminal Ports)",
+              "url": "https://geoserver.geoportal.gov.ph/geoserver/geoportal/wms",
+              "layers": "geoportal:philippine_ports",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from Department of Agriculture",
+              "type": "wms",
+              "name": "Department of Agriculture - Fish port",
+              "url": "https://geoserver.geoportal.gov.ph/geoserver/geoportal/wms",
+              "layers": "geoportal:da_fishport",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from Department of Agrarian Reform",
+              "type": "wms",
+              "name": "Department of Agrarian Reform - VISTA",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:vista",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from Department of Agrarian Reform",
+              "type": "wms",
+              "name": "Department of Agrarian Reform - VISTA CAR Proposed FMR",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:dar_vista_proposed",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from Department of Agrarian Reform",
+              "type": "wms",
+              "name": "Department of Agrarian Reform - VISTA Region 12 Proposed FMR",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:dar_vista_proposed_12",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from Department of Agrarian Reform",
+              "type": "wms",
+              "name": "Department of Agrarian Reform - Agrarian Reform Communities",
+              "url": "https://geoserver.geoportal.gov.ph/geoserver/geoportal/wms",
+              "layers": "geoportal:dar_arc",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Data is from National Irrigation Administration",
+              "type": "wms",
+              "name": "National Irrigation System Service Area",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:nia",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "description": "Map is generated from MGB",
+              "type": "wms",
+              "name": "Flood Susceptibility",
+              "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
+              "layers": "geoagri:Flooding_Projected",
+              "hideDefaultDescription": true,
+              "hideSource": true,
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "viewerMode": "2d",
+  "baseMaps": {
+    "defaultBaseMapId": "basemap-openstreetmap",
+    "previewBaseMapId": "basemap-google-satellite",
+    "enabledBaseMaps": [
+      "basemap-openstreetmap",
+      "basemap-google-satellite",
+      "basemap-darkmatter",
+      "basemap-positron"
+    ],
+    "items": [
+      {
+        "item": {
+          "id": "basemap-google-satellite",
+          "type": "url-template-imagery",
+          "name": "Google Satellite",
+          "url": "http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}",
+          "opacity": 1
+        },
+        "image": "https://geoagri.bafe.gov.ph/media/map_thumbnails/basemap_google_satellite.png"
+      },
+      {
+        "item": {
+          "id": "basemap-openstreetmap",
+          "name": "OpenStreetMap",
+          "type": "open-street-map",
+          "url": "https://tile.openstreetmap.org/",
+          "attribution": "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap contributors</a>",
+          "opacity": 1.0
+        },
+        "contrastColor": "#000000",
+        "image": "https://geoagri.bafe.gov.ph/media/map_thumbnails/basemap_openstreetmap.png"
+      },
+      {
+        "item": {
+          "id": "basemap-natural-earth-II",
+          "name": "Natural Earth II",
+          "type": "url-template-imagery",
+          "url": "https://storage.googleapis.com/terria-datasets-public/basemaps/natural-earth-tiles/{z}/{x}/{reverseY}.png",
+          "attribution": "<a href='https://www.naturalearthdata.com/downloads/10m-raster-data/10m-natural-earth-2/'>Natural Earth II</a> - From Natural Earth. <a href='https://www.naturalearthdata.com/about/terms-of-use/'>Public Domain</a>.",
+          "maximumLevel": 7,
+          "opacity": 1.0
+        },
+        "image": "build/TerriaJS/images/natural-earth.png",
+        "contrastColor": "#000000"
+      },
+      {
+        "item": {
+          "type": "open-street-map",
+          "id": "basemap-positron",
+          "name": "Positron",
+          "url": "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
+          "subdomains": ["a", "b", "c", "d"],
+          "attribution": "© <a href='https://carto.com/'>CARTO</a>"
+        },
+        "image": "https://geoagri.bafe.gov.ph/media/map_thumbnails/basemap_positron.png"
+      },
+      {
+        "item": {
+          "type": "open-street-map",
+          "id": "basemap-darkmatter",
+          "name": "Dark Matter",
+          "url": "https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png",
+          "subdomains": ["a", "b", "c", "d"],
+          "attribution": "© <a href='https://carto.com/'>CARTO</a>"
+        },
+        "image": "https://geoagri.bafe.gov.ph/media/map_thumbnails/basemap_dark-matter.png"
+      }
+    ]
+  }
+}
