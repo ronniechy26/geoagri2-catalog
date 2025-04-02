@@ -1036,7 +1036,7 @@
           "members": [
             {
               "type": "group",
-              "name": "Department of Agriculture - Farm Bridge",
+              "name": "DA Farm-to-Market Bridges",
               "members": [
                 {
                   "description": "Data is from DA-BAFE",
@@ -1099,7 +1099,7 @@
             },
             {
               "type": "group",
-              "name": "Department of Agrarian Reform - Farm Bridge",
+              "name": "DAR - Farm Bridge",
               "members": [
                 {
                   "description": "Data is from Department of Agrarian Reform",
