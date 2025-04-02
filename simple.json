@@ -1041,7 +1041,7 @@
                 {
                   "description": "Data is from DA-BAFE",
                   "type": "wms",
-                  "name": "DA Farm Bridge Proposal",
+                  "name": "DA Farm-to-Market Bridges Proposal",
                   "url": "https://geoserver.bafe.gov.ph/geoserver/wms",
                   "layers": "geoagri:FMB_PROPOSAL",
                   "hideDefaultDescription": true,
